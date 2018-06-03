@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>糗事百科</title>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		html,body,ul,li,a,p,img,h1,h2,h3{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #f7f7f7;
+
+		}
+		a{
+			text-decoration: none;
+		}
+		.both{
+			background-color: #f7f7f7;
+		}
+		.header, .content, .fotter{
+			margin: 0 auto;
+		}
+		.head{
+			height: 86px;
+			background-color: #ffd52b;
+		}
+		.header{
+			width: 980px;
+			height: 82px;
+		}
+		.logo, .bar{
+			float: left;
+		}
+		.bar li{
+			list-style: none;
+			float: left;
+			height: 86px;
+			line-height: 86px;
+			padding: 0 14px;
+			color: #333;
+			margin: 0 1px;
+		}
+		.head a{
+			color: #7a4624;
+		}
+		.bar .wrap{
+			background-color: #ffe36f;
+			height: 82px;
+			line-height: 82px;
+			border-bottom: 4px solid #7a4624;
+		}
+		.bar li:hover{
+			background-color: #ffe36f; 
+		}
+		.clearfix::after{
+			display: block;
+			content: "";
+			height: 0;
+			clear: both;
+		}
+		.head p{
+			text-align: right;
+			height: 82px;
+			line-height: 82px;
+		}
+		.content{
+			height: 790px;
+			width: 980px;
+		}
+		.views{
+			width: 640px;
+			height: 694px;
+			float: left;
+			background-color: #fff;
+			margin:20px;
+		}
+		.content-top{
+			height: 90px;
+		}
+		.photo{
+			width: 50px;
+			height: 50px;
+			float: left;
+			padding: 10px 10px 0 10px;
+		}
+		.photo img{
+			border-radius: 100%;
+		}
+		.name{
+			font-size: 14px;
+			float: left;
+			padding: 25px;
+		}
+		.views a {
+			color: black;
+		}
+		.pho{
+			float: left;
+			width: 30px;
+			height: 30px;
+			background-image: url(./images/girl.png);
+			background-repeat: no-repeat;
+			margin: 25px 0;
+		}
+		.pho p{
+			font-size: 8px;
+			font-weight: 0;
+			color: #fff;
+			padding-left: 15px;
+		}
+		.content-middle{
+			height: 20px;
+			margin: 0 20px;
+			font-size: 14px;
+			text-align: left;
+		}
+		.content-img {
+			margin: 20px;
+		}
+		.content-img img{
+			width: 600px;
+		}
+		.content-laugh{
+			width: 600px;
+			height: 22px;
+			margin: 20px;
+		}
+		.name a, .content-laugh p, .content-laugh a{
+			font-size: 12px;
+			color: #9b8878;
+		}
+		.name a:hover{
+			color: black;
+		}
+		.content-laugher{
+			width: 600px;
+			height: 30px;
+			margin: 20px;
+		}
+		.content-laugher a{
+			display: block;
+			background-image: url(./images/8.png); 
+			float: left;
+			margin: 2px 10px;
+			width: 26px;
+			height: 26px;
+		}
+		.content-laugher .face{
+			background-image: url(./images/9.png);
+		}
+		.content-laugher .com{
+			background-image: url(./images/7.png);
+		}
+		.content-laugher .chat{
+			float: right;
+			background-repeat: no-repeat;
+		}
+		.content-laugher .chat a {
+			background-image: url(./images/2.png);
+			background-position: 1px 2px;
+		}
+		.content-laugher .chat .qq{
+			background-image: url(./images/3.png);
+		}
+		.content-laugher .chat .space{
+			background-position: 3px 3px;
+			background-image: url(./images/4.png);
+		}
+		.content-laugher .chat .blog{
+			background-image: url(./images/5.png);
+		}
+		.number li{
+			display: block;
+			float: left;
+			margin: 20px 3px;
+			list-style: none;
+			padding: 10px 15px;
+			background-color: #fff;
+		}
+		.number .number-bar{
+			background-color: #ffaa14;
+		}
+		.pictures{
+			width: 300px;
+			float: left;
+			height: 600px;		
+		}
+		.pictures-top{
+			padding-top: 20px;
+		}
+		.pictures-middle{
+			width: 300px;
+			background-color: #fff;
+		}
+		.pictures li{
+			list-style: none;
+			margin: 10px;
+			font-size: 14px;			
+		}
+		.pictures li a{
+			color: #6a5c4e;
+		}
+		.pictures li a:hover{
+			color: black;
+		}
+		.pictures h2{
+			font-size: 14px;
+			font-weight: 20;
+			margin: 10px 10px;
+		}
+		.pictures-fotter{
+			height: 355px;
+			width: 300px;
+			margin: 10px 0;
+			background-color: #fff;
+		}
+		.choice{
+			width: 260px;
+			height: 40px;
+			margin: 10px 20px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.choice h3{
+			color: #6a3906;
+			padding: 10px;
+			font-size: 16px;
+		}
+		.last img{
+			margin: 0 15px;
+		}
+		.fotter{
+			height: 367px;
+			background-color: #fff;
+		}
+		.fotter-top{
+			width: 960px;
+			height: 115px;
+			margin: 0 auto;
+		}
+		.advert{
+			width: 728px;
+			height: 90px;
+			margin-top: 20px;
+			margin: 0 auto;
+		}
+		.advert img{
+			margin-top: 22px;
+		}
+		.fotter-middle{
+			width: 960px;
+			height: 130px;
+			margin: 0 auto;
+			
+		}
+		.nav{
+			width: 192px;
+			height: 110px;
+			float: left;
+			margin-top: 20px;
+			border-bottom: 2px solid #f7f7f7;
+		}
+		.nav li{
+			padding: 2px 5px;
+			font-size: 12px;
+			list-style: none;
+		}
+		.nav .nav-head{
+			font-size: 14px;
+			padding: 5px 5px;
+			color: black;
+		}
+		.nav a{
+			color: #666;
+		}
+		.nav a:hover{
+			color: black;
+		}
+		.fotter-fotter p{
+			text-align: center;
+			padding-top: 5px;
+			color: #666;
+			font-size: 12px;
+		}
+		.fotter-fotter .fotter-head{
+			padding-top: 20px;
+		}
+		.showtime{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+			background:rgba(0,0,0,0.4);
+		}
+		.hide, .show{
+			position: relative;
+			z-index: 2;
+		}
+		.fotter-index{
+			border-radius: 1px solid red;
+			z-index:0;
+			/*background: rgba(0,0,0,0);*/
+		}
+	</style>
+</head>
+<body>
+<div class="showtime"></div>
+	<div class="head">
+		<div class="header">
+			<div class="logo"><img src="./images/qinshilogo.png" alt=""></div>
+			<div class="bar">
+				<ul class=clearfix>
+					<li class="wrap"><a href="#">热门</a></li>
+					<li><a href="#">24小时</a></li>
+					<li><a href="#">热图</a></li>
+					<li><a href="#">文字</a></li>
+					<li><a href="#">穿越</a></li>
+					<li><a href="#">糗图</a></li>
+					<li><a href="#">新鲜</a></li>
+					<li><a href="#">投稿</a></li>
+				</ul>
+			</div>
+			<p><a href="#">登录</a></p>
+		</div>
+	</div>
+	<div class="content">
+		<div class="views">
+			<div class="content-top">
+				<div class="photo">
+					<a href="#"><img src="./images/her.png" alt=""></a>
+				</div>
+				<div class="name">
+					<p><a href="#">让我再看你一眼</a></p>
+				</div>
+				<div class="pho">
+					<p>25</p>
+				</div>
+				<button class="show">点击</button>
+				<button class="hide">dianji</button>
+			</div>
+			<div class="content-middle">
+				<p>很666</p>
+			</div>
+			<div class="content-img">
+				<img src="./images/six.jpg" alt="">
+			</div>
+			<div class="content-laugh">
+				<p> 938 好笑·<a href="#">234评论</a></p>
+			</div>
+			<div class="content-laugher">
+				<a href="#"></a>
+				<a href="#" class="face"></a>
+				<a href="#" class="com"></a>
+				<div class="chat">
+					<a href="#"></a>
+					<a href="#" class="qq"></a>
+					<a href="#" class="space"></a>
+					<a href="#" class="blog"></a>
+				</div>
+			</div>
+			<div class="number">
+				<ul>
+					<li class="number-bar"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">...</a></li>
+					<li><a href="#">15</a></li>
+					<li class="number-bar"><a href="#">下一页</a></li>
+				</ul>
+			</div>
+		</div>			
+		<div class="pictures">
+			<div class="pictures-top">
+				<img src="./images/biao.png" alt="">
+			</div>
+			<div class="pictures-middle">
+				<ul><h2>热门</h2>
+					<li><a href="#"># 幸福告诉我们的孩子朗诵 #</a></li>
+					<li><a href="#"># 我应该感到自豪道理 #</a></li>
+					<li><a href="#"># 幸福原来在身边500字 #</a></li>
+					<li><a href="#"># 限量版幸福什么意思 #</a></li>
+					<li><a href="#"># 幸福在我的心中作文500 #</a></li>
+					<li><a href="#"># 有关幸福的作文四百字 #</a></li>
+					<li><a href="#"># 幸福家家有儿童舞蹈 #</a></li>
+					<li><a href="#"># 幸福在哪里体裁 #</a></li>
+					<li><a href="#"># 幸福在心间作文结尾 #</a></li>
+					<li><a href="#"># 作文我感到惭愧 #</a></li>
+				</ul>
+			</div>
+			<div class="pictures-fotter">
+				<div class="choice"><h3>爆笑糗事精选</h3></div>
+				<div class="last"><img src="./images/mao.png" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<div class="fotter">
+		<div class="fotter-top">
+			<div class="advert">
+				<img src="./images/imgad.jpg" alt="">
+			</div>
+		</div>
+		<div class="fotter-middle">
+			<div class="nav">
+				<ul>
+					<li class="nav-head">关于</li>
+					<li><a href="#">关于糗百</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">联系方式</a></li>
+				</ul>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="nav-head">帮助</li>
+					<li><a href="#">在线反馈</a></li>
+					<li><a href="#">用户协议</a></li>
+					<li><a href="#">隐私政策</a></li>
+				</ul>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="nav-head">下载</li>
+					<li><a href="#">Android 客户端</a></li>
+					<li><a href="#">Phone 客户端</a></li>
+				</ul>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="nav-head">关注</li>
+					<li><a href="#">微信</a></li>
+					<li><a href="#">新浪微博</a></li>
+					<li><a href="#">QQ空间</a></li>
+				</ul>
+			</div>
+			<div class="nav">
+				<ul>
+					<li class="nav-head">组织 </li>
+					<li><a href="#">网站反馈群</a></li>
+					<li><a href="#">官方粉丝群</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="fotter-fotter">
+			<p class="fotter-head">互联网ICP备案：京ICP备14028348号-1 </p>
+			<p>广播电视节目制作经营许可证：（京）字第08319号 网络文化经营许可证：京网文[2017]2369-247号</p>
+			<p>电信与信息服务业务经营许可证：京ICP证140448号 计算机信息网络国际联网单位备案：京公网安备11010502031601号  </p>
+			<p>友际无限（北京）科技有限公司 违法和不良信息举报电话：010-84872896 邮箱：kefu@qiushibaike.com</p>
+			<p>© Qiushibaike.com 糗事百科版权所有</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	// alert(1111);
+	// console.log(222);
+	// var baoma1="car";变量类型{“”  字符串类型   数字类型      }
+	// // console.log="baoma1"
+	//  alert(baoma1)
+	// var car="aodi";
+	// var num=1234;
+	// console.log(car,num);
+	$(function(){
+		$(".bar li").click(function(){
+			$(".bar li").removeClass("wrap")
+			$(this).addClass("wrap")
+			// $(this).addClass("wrap").siblings().removeClass("wrap")
+		})
+		$(".hide").click(function(){
+			$(".showtime").hide();
+		})
+		$(".show").click(function(){
+			$(".showtime").show();
+		})
+		// var navHead = $(".nav-head");
+		// navHead.click(function(){
+		// alert(123);
+		// })
+	})
+	</script>
+</body>
+</html>

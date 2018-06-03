@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>syy</title>
+	<style type="text/css">
+		html,body,ul,h1,h2,h3,h4,p {
+			margin :0;
+			padding: 0;
+			font-family: 微软雅黑;
+		}
+		.head, .content {
+			width: 1210px;
+			margin: 0 auto;
+		}
+		.logo{
+			width: 372px;
+			height: 90px;
+			background-image: url(./images/bg.png);
+			background-position: 0 -152px;
+		}
+		.logo:hover{
+			background-image: url(./images/bg.png);
+			background-position: 0  -252px;
+		}
+		ul {
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.bar li{
+			float: left;
+			font-size: 20px;
+			padding: 10px  38.76px;
+			color: #777;
+			background-color: #ddd;
+		}
+		.bar li:hover{
+			background-color: black;
+			color: #fff;
+		}
+		.bar ul li a{
+			color: #777;
+		}
+		.bar .bar-head{
+			background-color: black;
+		}
+		.clearfix::after{
+			display: block;
+			clear: both;
+			content: "";
+			height: 0;
+		}
+		.content>div{
+			float: left;
+		}
+		.left{
+			width: 178px;
+			height:980px; 
+			margin-top: 20px;
+			border: 1px solid #e8e7e3;			
+		}
+		h1{
+			font-size: 20px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			background-color: #e8e7e3;
+			color: #777;
+		}
+		.left p{
+			padding: 10px 0 8px 8px;
+			font-weight: 600;
+			height: 30px;
+			line-height: 30px;
+			font-size: 16px; 
+		}
+		.left li{
+			padding: 5px 0 5px 5px;
+			background-color: #fff;
+			color: black;
+		}
+		.left  ul li:hover{
+			background-color: #e8e7e3;
+			color: #fff; 
+		}
+		.left li a{
+			color: black;
+			font-size: 14px;
+		}
+		.left ul li.click{
+			background-color: #BD2D30;
+		}
+		.middle{
+			width: 810px;
+			height: 960px;
+			padding: 20px 20px;
+		}
+		.middle-top{
+			width: 810px;
+			height: 120px;
+			margin: 20px 0;
+			border-bottom:1px solid #aaa;
+		}
+		.middle h2{
+			font-size: 25px;
+			padding: 5px 0 0 3px;
+			font-weight: 100;
+		}
+		.up{
+			width: 105px;
+			height: 30px;
+			background-image: url(./images/down.png);
+			background-repeat: no-repeat;
+			background-position: 83px  10px;
+			border: none;
+		}
+		.down {
+			width: 105px;
+			height: 30px;
+			background-image: url(./images/down.png);
+			background-repeat: no-repeat;
+			background-position: 83px  10px;
+			border: none;
+		}
+		.middle form .down{
+			margin: 30px 30px 30px 66px;
+			padding-right: 20px;
+		}
+		.middle-center{
+			width: 810px;
+			height: 150px;
+			border-bottom:1px solid #aaa;
+		}
+		 h3{
+			font-size: 20px;
+			height: 30px;
+			line-height: 25px;
+		}
+		.middle p {
+			font-size: 14px;
+			padding: 10px 0;
+		}
+		.middle span{
+			color: #ff9955;
+		}
+		.middle-fotter{
+			width: 810px;
+			height: 329px;
+			border-bottom: 1px solid #aaa;/*dotted #aaa*/
+		}
+		.middle-fotter h3{
+			padding-top: 20px;
+		}
+		.middle-fotter p{
+			font-size: 14px;
+			padding: 10px 0;
+		}
+		.middle-fotter h4{
+			font-size: 16px;
+			padding: 10px 0;
+		}
+		.box{
+			width: 804px;
+			height: 81px;
+			padding: 10px 1.5px;
+			border: 1px dotted #aaa;
+			background-color: #e8e7e3;
+		}
+		.middle-fotter .box p{
+			padding: 5px 0 5px 20px;
+			font-size: 12px;
+		}
+		.fastener{
+			width: 106px;
+			height: 37px;
+			background-color: #EC686B;
+			margin-top:20px; 
+			border:none;
+		}
+		.fastener:hover{
+			background-color: #ba3537;
+		}
+		.middle-fotter a{
+			color: #fff;
+		}
+		.right{
+			width: 180px;
+			padding-top: 20px;
+			height: 980px;
+		}
+		.right a{
+			display: block;
+			background-image: url(./images/bg.png);
+			background-position: 2px  -400px;
+			margin: 15px auto;
+			width: 136px;
+			height: 64px;
+		}
+		.right a:hover{
+			background-position: 2px -464px;
+		}
+		.right .lab{
+			background-position: -148px -400px;
+		}
+		.right .lab:hover{
+			background-position: -148px -464px;
+		}
+		.right .test{
+			background-position: -300px -400px;
+		}
+		.right .test:hover{
+			background-position: -300px -464px;
+		}
+		.fotter{
+			width: 1210px;
+			height: 106px;
+			text-align: center;
+			font-size: 14px;
+			padding: 5px;
+		}
+		.fotter-top{
+			width: 1210;
+			height: 38px;
+			background-color: #e8e7e3;
+		}
+		.fotter-fotter{
+			width: 1210px;
+			padding-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<div class="logo"></div>
+		<div class="bar">
+			<ul class="clearfix">
+				<li class="bar-head"><a href="#">HTML/CSS</a></li>
+      			<li><a href="#">JavaScript</a></li>
+      			<li><a href="#">Serve Side</a></li>
+      			<li><a href="#">ASP.NET</a></li>
+      			<li><a href="#">XML</a></li>
+      			<li><a href="#">Web Servics</a></li>
+      			<li><a href="#">Web Building</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="left">
+			<h1>课程表</h1>
+			<p>HTML基础教程</p>
+			<ul>
+				<li><a href="#"></a>HTML 教程</li>
+				<li><a href="#">HTML 简介</a></li>
+				<li><a href="#">HTML 编辑器</a></li>
+				<li><a href="#">HTML 编辑器</a></li>
+				<li class="click"><a href="#">HTML 基础</a></li>
+				<li><a href="#">HTML 元素</a></li>
+				<li><a href="#">HTML 属性</a></li>
+				<li><a href="#">HTML 标题</a></li>
+				<li><a href="#">HTML 段落</a></li>
+				<li><a href="#">HTML 样式</a></li>
+				<li><a href="#">HTML 格式化</a></li>
+				<li><a href="#">HTML 引用</a></li>
+				<li><a href="#">HTML 计算机打码</a></li>
+				<li><a href="#">HTML 注释</a></li>
+				<li><a href="#">HTML CSS</a></li>
+				<li><a href="#">HTML 链接</a></li>
+				<li><a href="#">HTML 图像</a></li>
+				<li><a href="#">HTML 表格</a></li>
+				<li><a href="#">HTML 列表</a></li>
+				<li><a href="#">HTML 块</a></li>
+				<li><a href="#">HTML 类</a></li>
+				<li><a href="#">HTML 布局</a></li>
+				<li><a href="#">HTML 响应式设计</a></li>
+			</ul>
+		</div>
+		<div class="middle">
+			<div class="middle-top">
+				<h2>基本的 HTML 标签 - 四个实例</h2>
+				<div class="sheet">
+					<form action="form_action.asp"/>
+						<input type="submit" value="上一节" class="up">
+						<input type="submit" value="下一节" class="down">
+					</form>
+				</div>
+			</div>
+			<div class="middle-center">
+				<h3>本章通过实例向您演示最常用的 HTML 标签</h3>
+				<p><span>提示：</span>不要担心本章中您还没有学过的例子，您将在下面的章节中学到它们。</p>
+				<p><span>提示：</span>学习 HTML 最好的方式就是边学边做实验。我们为您准备了很好的 HTML 编辑器。使用这个编辑器，您可以任意编辑一段 HTML 源码，然后单击 TIY 按钮来查看结果。</p>
+			</div>
+			<div class="middle-fotter">
+				<h3>HTML 标题</h3>
+				<p>HTML 标题（Heading）是通过 &lt;h1&gt; - &lt;h6&gt; 等标签进行定义的。</p>
+				<h4>实例</h4>
+				<div class="box">
+					<p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
+					<p>&lt;h2&gt;This is a heading&lt;/h2&gt;</p>
+					<p>&lt;h3&gt;This is a heading&lt;/h3&gt;</p>
+				</div>
+				<button type="button" class="fastener"><a href="#">亲自试一试</a></button>
+			</div>
+		</div>
+		<div class="right">
+			<h1>工具箱</h1>
+			<a href="#"></a>
+			<a href="#" class="lab"></a>
+			<a href="#" class="test"></a>
+			<h1>赞助商链接</h1>
+		</div>
+		<div class="fotter">
+			<div class="fotter-top">
+				<p>W3School 提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。 </p>
+				<p>W3School 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。</p>
+			</div>
+			<div class="fotter-fotter">
+				<p>当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。 赞助商：上海赢科投资有限公司。 蒙ICP备06004630号</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

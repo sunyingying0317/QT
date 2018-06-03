@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>syy</title>
+	<style type="text/css">
+	html,body,ul,li,h1,h2,h3,h4,p,span,pre{
+		padding:0;
+		margin: -1px;
+		font-size: '微软雅黑';
+	}
+	.top{
+		width: 1210px;
+		height: 100px;
+		margin: 0 auto;		
+	}
+	.top-left{
+		width: 372px;
+		height: 90px;
+		float: left;
+		background-image: url("./images/bg.png");
+		background-position: 3px  -158px;
+	}
+	.top-left:hover{
+		background-image: url("./images/bg.png");
+		background-position: 3px  -258px;
+	}
+	.top-right{
+		width: 728px;
+		height: 90px;
+		padding-right: 3px;
+		float: right;
+	}
+	.title{
+		width: 1210px;
+		height: 48px;
+		margin:5px auto;
+	}
+	.title li{
+		list-style: none;
+		padding: 10px 44.62px;
+		color: #777777;
+		font-size: 18px;
+		background-color: #e8e7e3;
+		float: left;
+	}
+	.title li:hover{
+		background-color:#3F3F3F;
+	}
+	.clearfix::after{
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+	}
+	.content{
+		width: 1210px;
+		height: 700px;
+		margin: 0 auto;	
+	}
+  	.content .content-middle a{
+		text-decoration: none;
+		color: #fff;
+	}
+	.content-left {
+		width: 180px;
+		height:670px;
+		float: left;	
+		margin: 13px 0;
+		border:1px solid #e8e7e3;
+	}
+    h1{
+		text-align: center;
+		font-size: 16px;
+		font-family: '微软雅黑';
+		color: grey;
+		padding: 10px;
+		background-color: #e8e7e3;
+	}
+	.null{
+		list-style: none;
+		margin: 10px 0;
+	}
+	.null li{
+		font-family: '微软雅黑';
+		font-size: 12px;
+		color: #000000;
+		padding: 6px 10px;
+	}
+	.null li:hover{
+		background-color: #e8e7e3;
+	}
+	.content .content-left .null  .null-li{
+		background-color: #BD2D30;
+		text-decoration:none;
+	}
+	.content-middle{
+		width: 848px;
+		height: 670px;
+		float: left;
+	}
+	.head{
+		width: 810px;
+		height: 127px;
+		margin: 15px 20px;
+		padding: 10px 0;
+		border-bottom:1px solid #aaa;
+	}
+	.head h2{
+		font-size: 28px;
+		font-weight: 400;
+		font-family: '微软雅黑';
+	}
+	.p-relative-one{
+		background-image: url("./images/bg.png");
+		position: relative;
+		background-position: -125px -579px;
+		background-repeat: no-repeat;
+		width: 106px;
+		height: 30px;
+		top: 47px;
+		left:169px;
+	}
+	.p-relative-two:hover{
+		background-image: url("./images/bg.png");
+		background-position: 0 -628px;
+	}
+	.p-relative-two{
+		background-image: url("./images/bg.png");
+		position: relative;
+		background-position: 0px -580px;	
+		top: 18px;
+		left: 0;
+		width: 106px;
+		height: 30px;
+	}
+	.p-relative-one:hover{
+		background-image: url("./images/bg.png");
+		background-position: -125px -628px;
+	}
+	.con-first{
+		width: 810px;
+		height: 149px;
+		padding: 10px 0;
+		margin: 15px 20px;
+		color: #3f3f3f;
+		border-bottom: 1px solid  #aaa;
+	}
+	.con-second{
+		width: 810px;
+		height: 289px;
+		margin: 10px 20px;
+		padding: 10px 0;
+		text-align: left;
+		border-bottom: 1px solid #aaa;
+	}
+	h3{
+		font-family: 微软雅黑;
+		font-size: 18px;
+	}
+	span{
+		color: #ff9955;
+	}
+	.content p{
+		margin: 10px  0;
+		line-height: 200%;
+		font-size: 14px;
+	}
+	h4{
+		font-size: 16px;
+		font-family: 微软雅黑;
+	}
+	.small {
+		display: block;
+		margin: 10px 0;
+		padding: 20px ;
+		font-size: 14px;
+		background-color: #f5f5f5;
+		font-family: Consolas;
+		text-align: left;
+		border:1px dotted #aaa;
+	}
+	.small p{
+		line-height: 0.7;
+	}
+	.con-second button{
+		width: 106px;
+		height: 37px;
+		padding:10px;
+		margin: 10px 0;
+		color: #fff;
+		border:0;
+		background-color: #EC686B; 
+	}
+	.con-second button:hover{
+		background-color: #ba3537;
+	}
+	.content-right{
+		width: 180px;
+		float: left;
+		padding: 15px 0;
+		height:353px;
+	}
+	.content .content-right  a{
+		display: block;
+		margin: 20px 20px;
+		width: 138px;
+		height: 64px;
+		background-image: url(./images/bg.png);
+		background-repeat: no-repeat;
+		background-position: 0 -400px;
+	}
+	.content .content-right  a:hover{
+		background-image: url(./images/bg.png);
+		background-position: 0 -464px;
+	}
+	 .content .content-right .a2{
+		background-repeat: no-repeat;
+		background-position: -150px -400px;
+	}
+	.content .content-right .a2:hover{
+		background-position: -150px -464px;
+	}
+	.content .content-right .a3{
+		background-position: -300px -400px;
+	}
+	.content .content-right .a3:hover{
+		background-position: -300px -464px;
+	}
+	.jie{
+		height: 237px;
+		padding-bottom: 0;
+		margin: 20px 0;
+	}
+	.fotter{
+		width: 1210px;
+		height: 106px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.fotter-top{
+		width: 1210px;
+		height: 48px;
+		line-height: 1.5;
+		color: #777777;
+		font-size: 12px;
+		background-color: #e8e7e3 ;
+	}
+	.footer-bottom{
+		width: 1210px;
+		height: 48px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px 0;
+		color: #777777;
+		font-size: 12px;
+		background-color: #e8e7e3 ;
+	}
+	.fotter-bottom p{
+		padding: 20px 0;
+		font-size: 14px;
+		color: #777777;
+		background-color:#fff;
+
+	}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="top-left"></div>
+		<div class="top-right">
+		<img src="./images/guanggao.jpg" alt="">
+		</div>
+	</div>
+	<div class="title">
+		<ul class="title clearfix">
+      			<li >HTML/CSS</li>
+      			<li>JavaScript</li>
+      			<li>Serve Side</li>
+      			<li>ASP.NET</li>
+      			<li>XML</li>
+      			<li>Web Servics</li>
+      			<li>Web Building</li>
+		</ul>
+	</div>
+	<div class="content">
+		<div class="content-left">
+			<h1>课程表</h1>
+			<ul class="null">
+				<li><b>HTML 基础教程</b></li>
+				<li>HTML 教程</li>
+				<li>HTML 简介</li>
+				<li>HTML 编辑器</li>
+				<li>HTML 基础</li>
+				<li class="null-li">HTML 元素</li>
+				<li>HTML 属性</li>
+				<li>HTML 标题</li>
+				<li>HTML 段落</li>
+				<li>HTML 样式</li>
+				<li>HTML 格式化</li>
+				<li>HTML 引用</li>
+				<li>HTML 计算机打码</li>
+				<li>HTML 注释</li>
+				<li>HTML CSS</li>
+				<li>HTML 链接</li>
+				<li>HTML 图像</li>
+				<li>HTML 表格</li>
+				<li>HTML 列表</li>
+				<li>HTML 块</li>
+				<li>HTML 类</li>
+				<li>HTML 布局</li>
+				<li>HTML 响应式设计</li>
+			</ul>
+		</div>
+		<div class="content-middle">	
+			<div class="head">
+				<h2>基本的HTML标签-四个实例</h2>
+				<div class="p-relative-one"></div>
+				<div class="p-relative-two"></div>
+			</div>
+			<div class="con-first">
+				<h3>本章通过实例向您演示最常用的 HTML 标签</h3>
+				<p><span>提示：</span>不要担心本章中您还没有学过的例子，您将在下面的章节中学到它们。</p>
+				<p><span>提示：</span>学习 HTML 最好的方式就是边学边做实验。我们为您准备了很好的 HTML 编辑器。使用这个编辑器，您可以任意编辑一段 HTML 源码，然后单击 TIY 按钮来查看结果。</p>
+			</div>
+			<div class="con-second">
+				<h3>HTML 标题</h3>
+				<p>HTML 标题（Heading）是通过 h1 - h6 等标签进行定义的。</p>
+				<h4>实例</h4>
+				<div class="small">	
+					<p>h1>This is a heading /h1></p>
+					<p>h2>This is a heading /h2></p>
+					<p>h3>This is a heading /h3></p>
+				</div>	
+				<button type="button"><a href="www.baidu.com">亲自试一试</a></button>
+			</div>
+		</div>
+		<div class="content-right">
+			<h1>工具箱</h1>
+			<a href="http//:www.baidu.com"></a>
+			<a href="http//:www.baidu.com" class="a2"></a>
+			<a href="http//:www.baidu.com" class="a3"></a>
+			<h1>赞助商链接</h1>
+			
+		</div>
+		<div class="jie">
+				<img src="./images/bu.png" alt="width=180px height=337px ">
+			</div>
+	</div>
+	<div class="fotter">
+		<div class="fotter-top">
+			<p>W3School 提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。</p>
+			<p>W3School 简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。</p>
+		</div>
+		<div class="fotter-bottom">
+			<p>当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。 赞助商：上海赢科投资有限公司。 蒙ICP备06004630号</p>
+		</div>
+	</div>
+</body>
+</html>
